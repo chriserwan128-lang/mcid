@@ -12,15 +12,15 @@ const types = [
 
 export default function BusinessTypes() {
   return (
-    <section id="types" className="py-32 lg:py-48 bg-[#030610] border-y border-white/[0.03] relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-mcid-gold/5 blur-[200px] -z-10 rounded-full pointer-events-none" />
+    <section id="types" className="py-32 lg:py-48 bg-white dark:bg-[#030610] border-y border-gray-200 dark:border-white/[0.03] relative overflow-hidden transition-colors duration-300">
+      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-mcid-gold/10 dark:bg-mcid-gold/5 blur-[200px] -z-10 rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       
       <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-24">
-          <h2 className="text-xs font-bold tracking-[0.25em] text-mcid-gold-light uppercase mb-6">Adaptabilité Totale</h2>
-          <h3 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold mb-8 text-white tracking-tighter leading-[1.1]">Un standard d'excellence <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-mcid-gold via-mcid-gold-light to-mcid-gold">pour chaque métier</span></h3>
-          <p className="text-white/50 text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          <h2 className="text-xs font-bold tracking-[0.25em] text-mcid-gold dark:text-mcid-gold-light uppercase mb-6">Adaptabilité Totale</h2>
+          <h3 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold mb-8 text-gray-900 dark:text-white tracking-tighter leading-[1.1]">Un standard d'excellence <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-mcid-gold via-yellow-600 to-mcid-gold dark:via-mcid-gold-light">pour chaque métier</span></h3>
+          <p className="text-gray-500 dark:text-white/50 text-xl font-light leading-relaxed max-w-2xl mx-auto">
             Notre technologie s'adapte à l'ADN de votre entreprise, offrant une expérience sur-mesure pour chaque secteur d'activité.
           </p>
         </div>
@@ -33,18 +33,18 @@ export default function BusinessTypes() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}
-              className="relative group overflow-hidden rounded-[2.5rem] aspect-[4/3] sm:aspect-auto sm:h-[400px] cursor-pointer border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
+              className="relative group overflow-hidden rounded-[2.5rem] aspect-[4/3] sm:aspect-auto sm:h-[400px] cursor-pointer border border-gray-200 dark:border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
             >
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-110" style={{ backgroundImage: `url(${type.image})` }} />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030610] via-[#030610]/60 to-transparent opacity-95 group-hover:opacity-80 transition-opacity duration-500" />
-              <div className="absolute inset-0 bg-mcid-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 dark:from-[#030610] dark:via-[#030610]/60 to-transparent opacity-90 dark:opacity-95 group-hover:opacity-70 dark:group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-mcid-gold/20 dark:bg-mcid-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
               
               <div className="absolute bottom-0 left-0 p-10 w-full transform group-hover:-translate-y-4 transition-transform duration-700 ease-out text-left">
-                <div className="p-5 bg-black/40 backdrop-blur-xl border border-white/10 shadow-inner rounded-2xl inline-block mb-6 group-hover:border-mcid-gold/30 group-hover:bg-black/60 transition-all duration-500">
-                  <type.icon className="w-8 h-8 text-mcid-gold group-hover:text-mcid-gold-light transition-colors" />
+                <div className="p-5 bg-white/90 dark:bg-black/60 backdrop-blur-xl border border-gray-100 dark:border-white/10 shadow-[0_5px_15px_rgba(0,0,0,0.1)] dark:shadow-inner rounded-2xl inline-block mb-6 group-hover:border-mcid-gold/30 dark:group-hover:bg-black/70 transition-all duration-500">
+                  <type.icon className="w-8 h-8 text-mcid-gold group-hover:text-yellow-600 dark:group-hover:text-mcid-gold-light transition-colors" />
                 </div>
                 <h4 className="text-3xl font-black text-white tracking-tight drop-shadow-lg">{type.name}</h4>
-                <div className="h-[2px] w-0 bg-gradient-to-r from-mcid-gold to-mcid-gold-light mt-5 group-hover:w-24 transition-all duration-700 ease-out" />
+                <div className="h-[2px] w-0 bg-gradient-to-r from-mcid-gold to-yellow-500 dark:to-mcid-gold-light mt-5 group-hover:w-24 transition-all duration-700 ease-out" />
               </div>
             </motion.div>
           ))}
