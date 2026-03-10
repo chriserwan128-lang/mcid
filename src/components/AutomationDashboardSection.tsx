@@ -11,9 +11,9 @@ const metrics = [
 
 export default function AutomationDashboardSection() {
   return (
-    <section className="py-32 lg:py-44 bg-white dark:bg-[#050913] relative overflow-hidden border-t border-gray-200 dark:border-white/5 transition-colors duration-300">
+    <section className="py-32 lg:py-44 bg-[#F8FAFC] dark:bg-[#050913] relative overflow-hidden border-t border-gray-200 dark:border-white/5 transition-colors duration-300">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function AutomationDashboardSection() {
           className="relative"
         >
           <div className="absolute -inset-20 bg-[radial-gradient(circle,rgba(212,175,55,0.15),transparent_70%)] blur-3xl opacity-70 pointer-events-none" />
-          <div className="relative rounded-[2.5rem] border border-gray-200 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] p-10 dark:border-white/5 dark:bg-gradient-to-b dark:from-[#0B1228] dark:to-[#04070f] dark:shadow-[0_40px_80px_rgba(0,0,0,0.65)]">
+          <div className="relative rounded-[2.5rem] border border-gray-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl p-10 dark:border-white/5 dark:bg-gradient-to-b dark:from-[#0B1228] dark:to-[#04070f] dark:shadow-[0_40px_80px_rgba(0,0,0,0.65)]">
             <div className="flex items-center justify-between mb-10">
               <div>
                 <p className="text-sm uppercase tracking-[0.4em] text-gray-400 dark:text-white/40 font-bold">Tableau de pilotage</p>
@@ -51,11 +51,14 @@ export default function AutomationDashboardSection() {
                 Temps réel
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="grid sm:grid-cols-2 gap-6 mb-10">
               {metrics.map((metric) => {
                 const isAvis = metric.label === "Avis Google";
                 return (
-                <div key={metric.label} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#0f1a33] dark:shadow-none">
+                <div
+                  key={metric.label}
+                  className="rounded-3xl border border-gray-200 bg-white p-6 shadow-[0_5px_20px_rgba(15,23,42,0.08)] transition-colors dark:border-white/10 dark:bg-[#0f1a33] dark:shadow-none"
+                >
                   <div className="flex items-center gap-3 text-gray-900 dark:text-white mb-4">
                     <metric.icon className="w-5 h-5 text-mcid-gold" />
                     <span className="text-xs uppercase tracking-[0.4em] text-gray-400 dark:text-white/50 font-bold">{metric.label}</span>
@@ -66,7 +69,7 @@ export default function AutomationDashboardSection() {
               )})}
             </div>
 
-            <div className="rounded-[2rem] border border-mcid-gold/20 bg-gradient-to-br from-white to-mcid-gold/5 p-8 shadow-sm dark:border-mcid-gold/30 dark:bg-gradient-to-r dark:from-mcid-gold/20 dark:via-mcid-gold-light/10 dark:to-transparent dark:shadow-none">
+            <div className="rounded-[2rem] border border-mcid-gold/20 bg-gradient-to-br from-white to-mcid-gold/5 p-8 shadow-[0_5px_20px_rgba(15,23,42,0.05)] dark:border-mcid-gold/30 dark:bg-gradient-to-r dark:from-mcid-gold/20 dark:via-mcid-gold-light/10 dark:to-transparent dark:shadow-none">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <p className="text-xs uppercase tracking-[0.4em] text-gray-400 dark:text-white/60 font-bold mb-1">Courbe d'impact</p>
