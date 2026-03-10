@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mcid-dark: #0B132B; /* Ultra-premium deep brand background */
+  --color-mcid-gold: #D4AF37; /* Primary gold accent */
+  --color-mcid-gold-light: #F4E5A1; /* Secondary gold highlight */
+  --color-mcid-light: #FFFFFF;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-mcid-dark);
+    color: var(--color-mcid-light);
+    font-family: var(--font-sans);
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
