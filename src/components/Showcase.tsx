@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 
 export default function Showcase() {
   return (
-    <section className="py-32 lg:py-48 bg-[#02040A] relative border-b border-white/[0.03] overflow-hidden">
+    <section className="py-24 sm:py-32 lg:py-48 bg-[#02040A] relative border-b border-white/[0.03] overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-mcid-gold/5 blur-[250px] pointer-events-none" />
       
-      <div className="max-w-[1400px] w-full mx-auto px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto mb-24">
-          <h2 className="text-xs font-bold tracking-[0.25em] text-mcid-gold-light uppercase mb-6 drop-shadow-lg">Ingénierie Technologique</h2>
-          <h3 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold mb-8 tracking-tighter text-white leading-[1.1]">Une présence plus <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-mcid-gold via-mcid-gold-light to-mcid-gold">puissante</span> pour votre commerce</h3>
-          <p className="text-white/50 text-xl font-light leading-relaxed max-w-2xl mx-auto">
+      <div className="max-w-[1400px] w-full mx-auto px-5 sm:px-6 relative z-10">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
+          <h2 className="text-xs font-bold tracking-[0.25em] text-mcid-gold-light uppercase mb-4 drop-shadow-lg">Ingénierie Technologique</h2>
+          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold mb-6 md:mb-8 tracking-tighter text-white leading-[1.1]">Une présence plus <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-mcid-gold via-mcid-gold-light to-mcid-gold">puissante</span> pour votre commerce</h3>
+          <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
             Des interfaces premium de niveau entreprise qui subliment votre marque et transforment l'expérience de vos clients au quotidien.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, y: 40 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -57,12 +57,12 @@ export default function Showcase() {
             </div>
           </motion.div>
 
-          <div className="grid grid-rows-2 gap-10 lg:col-span-1 h-[800px] lg:h-auto">
+          <div className="grid grid-rows-2 gap-10 lg:col-span-1 h-[600px] sm:h-[700px] lg:h-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 40 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: 0.2, durée: 0.9, ease: "easeOut" }}
+              transition={{ delay: 0.2, duration: 0.9, ease: "easeOut" }}
               className="bg-gradient-to-br from-mcid-gold/10 via-[#0B132B] to-[#02040A] rounded-[3rem] border border-mcid-gold/30 overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] p-12 flex flex-col justify-between group relative"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-mcid-gold/20 blur-[100px] pointer-events-none" />
@@ -82,7 +82,7 @@ export default function Showcase() {
               initial={{ opacity: 0, scale: 0.95, y: 40 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: 0.4, durée: 0.9, ease: "easeOut" }}
+              transition={{ delay: 0.4, duration: 0.9, ease: "easeOut" }}
               className="bg-gradient-to-br from-[#0B132B] to-[#02040A] rounded-[3rem] border border-white/5 overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] p-12 flex flex-col justify-between group relative"
             >
               <div className="relative z-10">

@@ -42,7 +42,7 @@ export default function WebsiteShowcaseSection() {
           initial={{ opacity: 0, scale: 0.95, y: 60 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ durée: 1 }}
+          transition={{ duration: 1 }}
           className="relative"
         >
           <div className="absolute -inset-16 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.25),transparent_70%)] blur-3xl opacity-70 pointer-events-none" />

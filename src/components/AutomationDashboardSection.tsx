@@ -37,7 +37,7 @@ export default function AutomationDashboardSection() {
           initial={{ opacity: 0, scale: 0.95, y: 60 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ durée: 1 }}
+          transition={{ duration: 1 }}
           className="relative"
         >
           <div className="absolute -inset-20 bg-[radial-gradient(circle,rgba(244,229,161,0.2),transparent_70%)] blur-3xl opacity-70 pointer-events-none" />

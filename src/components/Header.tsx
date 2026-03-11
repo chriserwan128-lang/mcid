@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-mcid-dark/90 text-white backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-      <div className="mx-auto flex h-20 w-full max-w-[1400px] items-center justify-between px-6 md:h-24">
+      <div className="mx-auto flex h-16 sm:h-18 md:h-24 w-full max-w-[1400px] items-center justify-between px-4 sm:px-6">
         <div className="flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-mcid-gold to-yellow-500 text-xl font-black text-mcid-dark shadow-lg">
             MC
