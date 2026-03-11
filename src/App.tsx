@@ -13,29 +13,25 @@ import Benefits from './components/Benefits';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
-import { ThemeProvider } from './hooks/useTheme';
-
 function App() {
   return (
-    <ThemeProvider>
-      <CalendlyProvider>
-        <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-mcid-gold selection:text-mcid-dark transition-colors duration-500 dark:bg-mcid-dark dark:text-mcid-light">
-          <Header />
-          <Hero />
-          <TrustStrip />
-          <Services />
-          <BusinessTypes />
-          <HowItWorks />
-          <Showcase />
-          <LoyaltyCardSection />
-          <WebsiteShowcaseSection />
-          <AutomationDashboardSection />
-          <Benefits />
-          <FinalCTA />
-          <Footer />
-        </div>
-      </CalendlyProvider>
-    </ThemeProvider>
+    <CalendlyProvider>
+      <div className="min-h-screen bg-mcid-dark text-mcid-light font-sans selection:bg-mcid-gold selection:text-mcid-dark">
+        <Header />
+        <Hero />
+        <TrustStrip />
+        <Services />
+        <BusinessTypes />
+        <HowItWorks />
+        <Showcase />
+        <LoyaltyCardSection />
+        <WebsiteShowcaseSection />
+        <AutomationDashboardSection />
+        <Benefits />
+        <FinalCTA />
+        <Footer />
+      </div>
+    </CalendlyProvider>
   );
 }
 
